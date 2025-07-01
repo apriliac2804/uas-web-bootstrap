@@ -4,17 +4,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login - Uas pemrograman Web</title>
+  <title>Login</title>
   <meta name="color-scheme" content="light dark">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
       opacity: 0;
       transition: opacity 0.6s ease-in-out;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     body.loaded {
@@ -22,23 +25,25 @@
     }
 
     .form-login {
-      max-width: 360px;
+      max-width: 400px;
       width: 100%;
       padding: 2rem;
-      border-radius: 15px;
-      background-color: var(--bs-body-bg);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease-in-out;
     }
 
     .form-title {
-      font-size: 1.3rem;
-      font-weight: 600;
+      font-size: 1.5rem;
+      font-weight: 700;
       margin-bottom: 1.5rem;
       color: var(--bs-primary);
     }
 
     .logo {
-      height: 70px;
+      height: 80px;
       margin-bottom: 1rem;
     }
 
@@ -53,48 +58,42 @@
       z-index: 1000;
     }
 
-    body.theme-transition {
-      opacity: 0.5;
-    }
-
-    body.theme-final {
-      opacity: 1;
-      transition: all 0.5s ease-in-out;
-    }
-
     .btn-primary {
-      background-color: #0d6efd;
-      border-color: #0d6efd;
+      background: linear-gradient(135deg, #0d6efd, #0a58ca);
+      border: none;
+      font-weight: 500;
+      letter-spacing: 0.5px;
     }
 
     .btn-primary:hover {
-      background-color: #0b5ed7;
+      background: linear-gradient(135deg, #0b5ed7, #094bb8);
     }
 
-    /* ===== Fix Dark Theme ===== */
+    .form-control {
+      border-radius: 10px;
+    }
+
+    .form-check-label {
+      font-size: 0.9rem;
+    }
+
+    p.text-muted {
+      font-size: 0.8rem;
+    }
+
+    /* ===== DARK MODE FIX ===== */
     [data-bs-theme="dark"] body {
-      background-color: #121212;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
       color: #f8f9fa;
     }
 
     [data-bs-theme="dark"] .form-login {
-      background-color: #1e1e1e;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      background: rgba(30, 30, 30, 0.9);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
     }
 
     [data-bs-theme="dark"] .form-title {
       color: #0dcaf0;
-    }
-
-    [data-bs-theme="dark"] .btn-primary {
-      background-color: #0dcaf0;
-      border-color: #0dcaf0;
-      color: #000;
-    }
-
-    [data-bs-theme="dark"] .btn-primary:hover {
-      background-color: #31d2f2;
-      border-color: #31d2f2;
     }
 
     [data-bs-theme="dark"] .form-control {
@@ -104,11 +103,29 @@
     }
 
     [data-bs-theme="dark"] .form-control::placeholder {
-      color: #ccc;
+      color: #aaa;
     }
 
     [data-bs-theme="dark"] .form-check-label {
       color: #ccc;
+    }
+
+    [data-bs-theme="dark"] .btn-primary {
+      background: linear-gradient(135deg, #0dcaf0, #0aabcc);
+      color: #000;
+    }
+
+    [data-bs-theme="dark"] .btn-primary:hover {
+      background: linear-gradient(135deg, #31d2f2, #0dcaf0);
+    }
+
+    body.theme-transition {
+      opacity: 0.5;
+    }
+
+    body.theme-final {
+      opacity: 1;
+      transition: all 0.5s ease-in-out;
     }
   </style>
 </head>
@@ -136,7 +153,7 @@
         <label class="form-check-label" for="rememberMe">Remember me</label>
       </div>
       <button class="btn btn-primary w-100" type="submit">Sign In</button>
-      <p class="mt-4 mb-0 text-muted small">&copy; 2024–2025 vallz-vsc </p>
+      <p class="mt-4 mb-0 text-muted small">&copy; 2024–2025 Aprillia</p>
     </form>
   </main>
 

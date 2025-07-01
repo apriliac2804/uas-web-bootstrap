@@ -82,7 +82,7 @@ session_start();
             <span>Admin</span>
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-            <li><a class="dropdown-item" href="#" onclick="toggleEditUser()">Edit User</a></li>
+            <li><a class="dropdown-item" href="#" onclick="toggleEditUser()">Setting</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -106,7 +106,7 @@ session_start();
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" onclick="toggleEditUser()">
-                <i data-feather="user" class="me-2"></i> Edit User
+                <i data-feather="user" class="me-2"></i> Setting
               </a>
             </li>
             <li class="nav-item">
